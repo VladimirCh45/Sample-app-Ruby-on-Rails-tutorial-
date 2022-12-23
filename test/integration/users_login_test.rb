@@ -7,9 +7,9 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   test "login with invalid information" do
     get login_path
-    assert_template "sessions/new"
+    assert_template "session/new"
     post login_path, params: { session: { email: "", password: "" } }
-    assert_template "sessions/new"
+    assert_template "session/new"
     assert_not flash.empty?
     get root_path
     assert flash.empty?
@@ -46,7 +46,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert is_logged_in?
     assert_redirected_to @user
     follow_redirect!
-    assert_tamplate 'user/show'
+    assert_template 'user/show'
     assert_select "a[href=?]", login_path, count: 0
     assert_select "a[href=?]", login_path
     assert_select "a[href=?]", user_path(@user)
