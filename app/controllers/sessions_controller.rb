@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
 
   # Destroying a session(user logout)
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_url
   end
 end
