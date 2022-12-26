@@ -3,3 +3,8 @@ bill:
   name: Bill Green
   email: billg@mail.com
   password_digest: <%= User.digest('password') %>
+
+alan:
+  name: Alan Gilfianakis
+  email: alan_g@mail.com
+  password_digest: <%= User.digest('password') %>
