@@ -49,6 +49,7 @@ gem "sassc-rails"
 gem "webpacker"
 gem "turbolinks"
 gem "bootstrap-sass"
+gem "faker", "2.1.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
