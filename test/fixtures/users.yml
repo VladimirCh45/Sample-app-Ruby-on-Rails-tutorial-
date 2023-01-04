@@ -3,6 +3,7 @@ bill:
   name: Bill Green
   email: billg@mail.com
   password_digest: <%= User.digest('password') %>
+  admin: true
 
 alan:
   name: Alan Gilfianakis
